@@ -1,6 +1,7 @@
 % time taken for a tank to drain
 % length of pipe segment
-L=[0.2 0.3 0.4 0.6];
+Length={0.2,0.3,0.4,0.6};
+FrictionFactor={0.06,}
 % initial height of water
 Z_1=0.08;
 % water left in tank after drainage
@@ -22,13 +23,23 @@ g=9.81;
 k=0.42;
 % coefficient of friction (TEST VALUES);
 f=6.5;
+% density of water
+roe=998;
+u=1.003E-3;
 % equation is of form:
 % t= (A-B)/(C*D)
-A=2*sqrt(Z_2+Z_3);
-B=2*sqrt(Z_tot);
-C=(-1)*(A_pipe/A_tank);
-D=sqrt((2*g)/(1+((L*f/d)+k)));
-
+for L=1:length(Length)
+    disp('---------')
+    disp(Length{L});
+    Re=(roe*sqrt((2*g)*(Z_tot))*d)/u;
+    A=2*sqrt(Z_2+Z_3);
+    B=2*sqrt(Z_tot);
+    C=(-1)*(A_pipe/A_tank);
+    D=sqrt((2*g)/(1+((Length{L}*f/d)+k)));
+    t=(A-B)/C*D;
+    disp(t/60);
+    disp(Re)
+    disp('---------')
+end
 % final equation
-t=(A-B)/C*D;
-disp(t/60);
+

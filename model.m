@@ -30,7 +30,7 @@ for L=1:length(Length)
     % vertical drop of the pipe
     Z_3=Length{L}/150;
     Z_tot=Z_1+Z_2+Z_3;
-    Re=(roe*sqrt((2*g)*((Length{L}/150)+Z_1+Z_2)*d))/u;
+    Re=(roe*sqrt((2*g)*((Length{L}/150)+Z_1+Z_2))*d)/u;
     A=2*sqrt(Z_2+Z_3);
     B=2*sqrt(Z_tot);
     C=(-1)*(A_pipe/A_tank);

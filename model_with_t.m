@@ -43,7 +43,7 @@ for i=1:length(Length)
     time=seconds(t);
     time.Format='hh:mm:ss';
     disp(time);
-    disp(Re)
+    % disp(Re)
     disp('---------')
 end
 % final equation

@@ -1,3 +1,8 @@
+% --------------------------------------
+% TIME TAKEN TO DRAIN TANK WITH JOINT
+% AUTHOR: SAMMY ROBENS-PARADISE, SROBENSP@UWATERLOO.CA
+% --------------------------------------
+
 % time taken for a tank to drain
 % length of pipe segment
 Length={0.2,0.3,0.4,0.6};

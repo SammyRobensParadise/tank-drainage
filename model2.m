@@ -1,4 +1,8 @@
-% time taken for a tank to drain
+% --------------------------------------
+% TIME TAKEN TO DRAIN TANK WITHOUT JOINT
+% AUTHOR: SAMMY ROBENS-PARADISE, SROBENSP@UWATERLOO.CA
+% --------------------------------------
+
 % length of pipe segment
 Length={0.1,0.2,0.3,0.4,0.6};
 % time to drain values from study

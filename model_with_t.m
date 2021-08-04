@@ -35,16 +35,16 @@ roe=998;
 u=1.003E-3;
 
 for i=1:length(Length)
-    disp('---------')
+    disp('-------------------------------------------')
+    disp('Length (m)')
     disp(Length{i});
     Z_3=Length{i}/150;
     Re=(roe*sqrt((2*g)*(Z_1+Z_2+Z_3))*d)/u;
     t=(A_tank/A_tJoint)*(sqrt(Z_1+Z_2+Z_3)-sqrt(Z_2+Z_3))*sqrt((1+(Length{i}*f_pipe/D)+(2*l*f_tJoint/d)+k_L+k_l)/2*g);
     time=seconds(t);
     time.Format='hh:mm:ss';
+    disp('Time (hh:mm:ss)')
     disp(time);
-    % disp(Re)
-    disp('---------')
+    disp('-------------------------------------------')
 end
-% final equation
 

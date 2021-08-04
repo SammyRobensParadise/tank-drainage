@@ -1,6 +1,6 @@
 % time taken for a tank to drain
 % length of pipe segment
-Length={0.2,0.3,0.4,0.6};
+Length={0.1,0.2,0.3,0.4,0.6};
 % length of T-joint segment (m)
 l=0.04;
 % coeff. of friction in pipe

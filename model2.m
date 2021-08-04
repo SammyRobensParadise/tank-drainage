@@ -23,11 +23,13 @@ k=0.42;
 % density of water
 roe=998;
 % kinematic viscocity of water
-
 u=1.003E-3;
+
+disp('plain pipe assembly')
 for i=1:length(Length)
     disp('-------------------------------------------')
     disp('Length (m)')
+    Re=(roe*sqrt((2*g)*(Z_1+Z_2+(Length{i}/150)))*d)/u;
     t=(A_tank/A_pipe)*(sqrt(((2*((4*f*Length{i}/d)+k)))/g))*(sqrt(Z_1+Z_2+(Length{i}/150))-sqrt(Z_2+(Length{i}/150)));
     disp(Length{i});
     time=seconds(t);
@@ -36,7 +38,9 @@ for i=1:length(Length)
     disp(time);
     disp('Error (%)')
     err=(abs(Exper{i}-t)/Exper{i})*100;
-    disp(err)
+    disp(err);
+    disp('Re');
+    disp(Re);
     disp('-------------------------------------------')
 end
 % final equation

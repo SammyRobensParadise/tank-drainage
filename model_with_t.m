@@ -1,6 +1,6 @@
 % time taken for a tank to drain
 % length of pipe segment
-Length={0.1,0.2,0.3,0.4,0.6};
+Length={0.2,0.3,0.4,0.6};
 % length of T-joint segment (m)
 l=0.04;
 % coeff. of friction in pipe
@@ -33,7 +33,7 @@ k_l=0.42*(1-((d^2)/(D^2)));
 roe=998;
 % kinematic viscocity of water
 u=1.003E-3;
-
+disp('With T-Joint')
 for i=1:length(Length)
     disp('-------------------------------------------')
     disp('Length (m)')
@@ -45,6 +45,8 @@ for i=1:length(Length)
     time.Format='hh:mm:ss';
     disp('Time (hh:mm:ss)')
     disp(time);
+    disp('Re');
+    disp(Re);
     disp('-------------------------------------------')
 end
 
